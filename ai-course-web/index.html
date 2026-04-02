@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс по ИИ для начинающих</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <h1>AI Course</h1>
+            </div>
+            <nav class="nav">
+                <a href="#home" class="nav-link active">Главная</a>
+                <a href="#modules" class="nav-link">Модули</a>
+                <a href="#practice" class="nav-link">Практика</a>
+                <a href="#resources" class="nav-link">Ресурсы</a>
+                <a href="#glossary" class="nav-link">Глоссарий</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Изучите Искусственный Интеллект с нуля</h2>
+                    <p>Полный курс для начинающих: от основ до первых практических проектов</p>
+                    <button class="btn btn-primary" onclick="scrollToSection('modules')">Начать обучение</button>
+                </div>
+                <div class="hero-image">
+                    <i class="fas fa-robot"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="container">
+                <div class="stat-card">
+                    <i class="fas fa-book"></i>
+                    <h3>3</h3>
+                    <p>Модуля</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-code"></i>
+                    <h3>2</h3>
+                    <p>Практических задания</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-list"></i>
+                    <h3>80+</h3>
+                    <p>Терминов в глоссарии</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-link"></i>
+                    <h3>50+</h3>
+                    <p>Полезных ресурсов</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modules Section -->
+        <section id="modules" class="modules">
+            <div class="container">
+                <h2 class="section-title">Учебные модули</h2>
+                <div class="modules-grid">
+                    <div class="module-card" data-module="1">
+                        <div class="module-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Модуль 1: Введение в ИИ</h3>
+                        <p>Что такое искусственный интеллект, история развития, основные понятия и области применения</p>
+                        <ul class="module-topics">
+                            <li>Определение ИИ</li>
+                            <li>История развития</li>
+                            <li>Типы ИИ</li>
+                            <li>Применение в жизни</li>
+                        </ul>
+                        <button class="btn btn-secondary" onclick="openModule(1)">Изучить модуль</button>
+                    </div>
+
+                    <div class="module-card" data-module="2">
+                        <div class="module-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Модуль 2: Машинное обучение</h3>
+                        <p>Основы машинного обучения, типы обучения, алгоритмы и практическое применение</p>
+                        <ul class="module-topics">
+                            <li>Что такое МО</li>
+                            <li>Обучение с учителем</li>
+                            <li>Обучение без учителя</li>
+                            <li>Популярные алгоритмы</li>
+                        </ul>
+                        <button class="btn btn-secondary" onclick="openModule(2)">Изучить модуль</button>
+                    </div>
+
+                    <div class="module-card" data-module="3">
+                        <div class="module-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>Модуль 3: Нейронные сети</h3>
+                        <p>Структура нейронных сетей, глубокое обучение, архитектуры и современные применения</p>
+                        <ul class="module-topics">
+                            <li>Структура нейросети</li>
+                            <li>Глубокое обучение</li>
+                            <li>CNN и RNN</li>
+                            <li>Трансформеры</li>
+                        </ul>
+                        <button class="btn btn-secondary" onclick="openModule(3)">Изучить модуль</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice Section -->
+        <section id="practice" class="practice">
+            <div class="container">
+                <h2 class="section-title">Практические задания</h2>
+                <div class="practice-grid">
+                    <div class="practice-card">
+                        <div class="practice-header">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Задание 1: Анализ данных</h3>
+                        </div>
+                        <p>Создайте программу для анализа набора данных о цветах ирисов с использованием библиотек pandas и matplotlib</p>
+                        <div class="practice-info">
+                            <span><i class="fas fa-clock"></i> 2-3 часа</span>
+                            <span><i class="fas fa-signal"></i> Начальный уровень</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="openPractice(1)">Начать задание</button>
+                    </div>
+
+                    <div class="practice-card">
+                        <div class="practice-header">
+                            <i class="fas fa-brain"></i>
+                            <h3>Задание 2: Простая нейросеть</h3>
+                        </div>
+                        <p>Реализуйте простую нейронную сеть для классификации изображений цифр (dataset MNIST)</p>
+                        <div class="practice-info">
+                            <span><i class="fas fa-clock"></i> 3-4 часа</span>
+                            <span><i class="fas fa-signal"></i> Средний уровень</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="openPractice(2)">Начать задание</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="resources">
+            <div class="container">
+                <h2 class="section-title">Дополнительные ресурсы</h2>
+                <div class="resources-tabs">
+                    <button class="tab-btn active" data-tab="books">📚 Книги</button>
+                    <button class="tab-btn" data-tab="courses">🎓 Курсы</button>
+                    <button class="tab-btn" data-tab="youtube">▶️ YouTube</button>
+                    <button class="tab-btn" data-tab="tools">🛠️ Инструменты</button>
+                </div>
+                <div class="resources-content">
+                    <div class="tab-content active" id="books">
+                        <div class="resource-list" id="books-list"></div>
+                    </div>
+                    <div class="tab-content" id="courses">
+                        <div class="resource-list" id="courses-list"></div>
+                    </div>
+                    <div class="tab-content" id="youtube">
+                        <div class="resource-list" id="youtube-list"></div>
+                    </div>
+                    <div class="tab-content" id="tools">
+                        <div class="resource-list" id="tools-list"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Glossary Section -->
+        <section id="glossary" class="glossary">
+            <div class="container">
+                <h2 class="section-title">Глоссарий терминов</h2>
+                <div class="glossary-search">
+                    <input type="text" id="glossary-search" placeholder="Поиск термина...">
+                </div>
+                <div class="glossary-grid" id="glossary-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Module Modal -->
+    <div id="module-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('module-modal')">&times;</button>
+            <div id="module-content"></div>
+        </div>
+    </div>
+
+    <!-- Practice Modal -->
+    <div id="practice-modal" class="modal">
+        <div class="modal-content modal-large">
+            <button class="close-btn" onclick="closeModal('practice-modal')">&times;</button>
+            <div id="practice-content"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Курс по ИИ для начинающих. Все права защищены.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/data.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
